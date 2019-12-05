@@ -1,0 +1,88 @@
+baseurl = "/"
+languageCode = "en-us"
+theme = "hello-friend-ng"
+DefaultContentLanguage = "en"
+defaultContentLanguageInSubdir = "true"
+
+[permalinks]
+  posts = "/:year/:month/:slug/"
+
+[author]
+  name = "Hugo Prudente"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02T05:04-0700"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Metadata mostly used in document's head
+  description = "Automation above all things"
+  subtitle = "devops"
+  keywords = "blog, programming, devops, sysadmin, security, automation, aws"
+  images = [""]
+
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
+
+  homeSubtitle = "Automation above all things"
+
+  # Social icons
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/hugoprudente"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/hugoprudente"
+
+  [[params.social]]
+    name = "stackoverflow"
+    url  = "https://stackoverflow.com/users/1463918/hugo-prudente"
+
+
+[languages]
+
+  [languages.en]
+    title = "Hugo Prudente"
+    subtitle = "Automation above all things!"
+    keywords = "blog, programming, devops, sysadmin, security, automation, aws"
+    copyright = "MIT License"
+    readOtherPosts = "Read other posts"
+    weight = 20
+    languageName = "English"
+
+
+    [languages.en.params.logo]
+      logoText = "make"
+      logoHomeLink = "/"
+
+  [languages.pt]
+    title = "Hugo Prudente"
+    subtitle = "Automação acima de tudo!"
+    keywords = "blog, programming, devops, sysadmin, security, automation, aws"
+    copyright = "MIT License"
+    readOtherPosts = "Leia outros posts"
+    weight = 10
+    languageName = "Portugues"
+
+    [languages.pt.params.logo]
+      logoText = "make"
+      logoHomeLink = "/"
+
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
