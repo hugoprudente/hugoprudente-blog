@@ -1,7 +1,7 @@
-baseurl = "/"
-languageCode = "en-us"
+baseURL = "https://hugoprudente.github.io"
+
 theme = "hello-friend-ng"
-DefaultContentLanguage = "en"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = "true"
 
 [permalinks]
@@ -9,6 +9,36 @@ defaultContentLanguageInSubdir = "true"
 
 [author]
   name = "Hugo Prudente"
+
+[taxonomies]
+
+[languages]
+[languages.en]
+weight = 0
+title  = "Hugo Prudente"
+
+  [[languages.en.menu.main]]
+  url = "/blog"
+  name = "Blog"
+  weight = 0
+  
+  [languages.en.params.logo]
+  logoText = "make"
+  logoHomeLink = "/en/"
+
+[languages.pt]
+weight = 1
+title  = "Hugo Prudente"
+
+  [[languages.pt.menu.main]]
+  url = "/pt/blog"
+  name = "Blog"
+  weight = 0
+  
+  [languages.pt.params.logo]
+  logoText = "make"
+  logoHomeLink = "/pt/"
+
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -26,7 +56,7 @@ defaultContentLanguageInSubdir = "true"
   images = [""]
 
   # Directory name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+  contentTypeName = "blog"
 
   # Default theme "light" or "dark"
   defaultTheme = "dark"
@@ -45,44 +75,3 @@ defaultContentLanguageInSubdir = "true"
   [[params.social]]
     name = "stackoverflow"
     url  = "https://stackoverflow.com/users/1463918/hugo-prudente"
-
-
-[languages]
-
-  [languages.en]
-    title = "Hugo Prudente"
-    subtitle = "Automation above all things!"
-    keywords = "blog, programming, devops, sysadmin, security, automation, aws"
-    copyright = "MIT License"
-    readOtherPosts = "Read other posts"
-    weight = 20
-    languageName = "English"
-
-
-    [languages.en.params.logo]
-      logoText = "make"
-      logoHomeLink = "/"
-
-  [languages.pt]
-    title = "Hugo Prudente"
-    subtitle = "Automação acima de tudo!"
-    keywords = "blog, programming, devops, sysadmin, security, automation, aws"
-    copyright = "MIT License"
-    readOtherPosts = "Leia outros posts"
-    weight = 10
-    languageName = "Portugues"
-
-    [languages.pt.params.logo]
-      logoText = "make"
-      logoHomeLink = "/"
-
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
-
-  # And you can even create generic menu
-  [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
