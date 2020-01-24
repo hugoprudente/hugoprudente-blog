@@ -104,5 +104,6 @@ slug: {{ replace .Name ".en.md" " " }}
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
+toc: false
 ---
 

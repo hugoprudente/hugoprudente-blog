@@ -1,16 +1,16 @@
 baseURL = "https://hugoprudente.github.io"
 
+googleAnalytics = "G-BVSTV863VB"
 theme = "hello-friend-ng"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = "true"
-
-[permalinks]
-  posts = "/:year/:month/:slug/"
 
 [author]
   name = "Hugo Prudente"
 
 [taxonomies]
+  tag      = "tags"
+  category = "categories"
 
 [languages]
 [languages.en]
@@ -18,7 +18,7 @@ weight = 0
 title  = "Hugo Prudente"
 
   [[languages.en.menu.main]]
-  url = "/blog"
+  url = "/posts"
   name = "Blog"
   weight = 0
   
@@ -31,15 +31,13 @@ weight = 1
 title  = "Hugo Prudente"
 
   [[languages.pt.menu.main]]
-  url = "/pt/blog"
+  url = "/pt/posts"
   name = "Blog"
   weight = 0
   
   [languages.pt.params.logo]
   logoText = "make"
   logoHomeLink = "/pt/"
-
-
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
@@ -52,11 +50,11 @@ title  = "Hugo Prudente"
   # Metadata mostly used in document's head
   description = "Automation above all things"
   subtitle = "devops"
-  keywords = "blog, programming, devops, sysadmin, security, automation, aws"
+  keywords = "posts, programming, devops, sysadmin, security, automation, aws"
   images = [""]
 
-  # Directory name of your blog content (default is `content/posts`)
-  contentTypeName = "blog"
+  # Directory name of your posts content (default is `content/posts`)
+  contentTypeName = "posts"
 
   # Default theme "light" or "dark"
   defaultTheme = "dark"

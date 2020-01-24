@@ -1,23 +1,25 @@
 ---
 categories:
-- Code
-- Training
-slug: learning-to-code-and-100-days-of-code-challenge.en.md
+- Programming
+
 tags:
-- Code
-- Training
 - Java
+- GoLang
 - Python
-- Go
 - Rust
-- CPP
+- C++
 - C
+- JavaScript
+- NodeJS
 - DotNet
-- NodeJs
-- Frameworks
+- Ruby
+- PHP
+- Bash
+
+slug: learning-to-code-and-100-days-of-code-challenge
 title: "Learning to code and 100 Days Of Code Challenge"
 date: 2020-01-17T16:48:29Z
-draft: true
+draft: false
 ---
 
 During my career `coding` was always a strongly present on my roles, and this was always one of my strongest points. Back in the day knowing tools were a little bit more hard, what have caused some wheels to be reinvented like my own in-house Zabbix, master-agent monitoring tool that I even deployed to 500 machines around the whole country (Brazil).
@@ -80,3 +82,5 @@ As I'm really rust I'm getting all that I can from the following content provide
 So let's see how it goes! My first commit is up! 
 
 See you all later!
+
+#VAIIII
