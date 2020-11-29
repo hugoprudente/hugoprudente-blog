@@ -1,6 +1,7 @@
 [submodule "hello-friend-ng"]
         path = themes/hello-friend-ng
-        url = https://github.com/panr/hugo-theme-hello-friend
+        #url = https://github.com/panr/hugo-theme-hello-friend
+        url = https://github.com/rhazdon/hugo-theme-hello-friend-ng
 [submodule "public"]
 	path = public
 	url = https://github.com/hugoprudente/hugoprudente.github.io
