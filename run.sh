@@ -10,5 +10,5 @@ printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 rm -rf public/*
 hugo -t hello-friend-ng
 #hugo
-hugo server -D
+hugo server -D --bind 0.0.0.0
 
