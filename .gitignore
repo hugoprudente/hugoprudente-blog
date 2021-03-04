@@ -1,0 +1,6 @@
+# Ignore gohugoio
+vendor/
+public/
+resources/
+static/
+.DS_Store

@@ -103,7 +103,7 @@ tags:
 slug: usando-aws-network-acls-com-natgateway
 title: "Usando AWS Network ACLs com NAT Gateway"
 date: 2020-07-11T13:09:21+02:00
-draft: true
+draft: false
 toc: true
 ---
 

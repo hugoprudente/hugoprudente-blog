@@ -26,18 +26,18 @@ title  = "Hugo Prudente"
   logoText = "make"
   logoHomeLink = "/en/"
 
-[languages.pt]
+[languages.pt-br]
 weight = 1
 title  = "Hugo Prudente"
 
-  [[languages.pt.menu.main]]
-  url = "/pt/posts"
+  [[languages.pt-br.menu.main]]
+  url = "/pt-br/posts"
   name = "Blog"
   weight = 0
   
-  [languages.pt.params.logo]
+  [languages.pt-br.params.logo]
   logoText = "make"
-  logoHomeLink = "/pt/"
+  logoHomeLink = "/pt-br/"
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
@@ -73,3 +73,7 @@ title  = "Hugo Prudente"
   [[params.social]]
     name = "stackoverflow"
     url  = "https://stackoverflow.com/users/1463918/hugo-prudente"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/hugoprudente/"
