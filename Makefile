@@ -9,7 +9,8 @@ WORKDIR=$(PWD)
 HUGO_CMD=docker run --rm -it -v ${WORKDIR}:/site ${DOCKER_NAMESPACE}/${DOCKER_IMG_NAME}:${DOCKER_IMG_TAG}
 HUGO_SERVER=docker run --rm -it -p1313:1313 -v ${WORKDIR}:/site ${DOCKER_NAMESPACE}/${DOCKER_IMG_NAME}:${DOCKER_IMG_TAG}
 
-COMMIT_MESSAGE=
+DATE=$(date)
+COMMIT_MESSAGE="2021 community return effort ${DATE}"
 VENDOR ?= ${WORKDIR}/vendor
 
 define PRINT_HELP_PYSCRIPT
