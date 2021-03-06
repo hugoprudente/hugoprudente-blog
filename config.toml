@@ -4,6 +4,8 @@ googleAnalytics = "UA-154006380-1"
 theme = "hello-friend-ng"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = "true"
+disqusShortname = "hugoprudente"
+
 
 [author]
   name = "Hugo Prudente"
@@ -77,3 +79,8 @@ title  = "Hugo Prudente"
   [[params.social]]
     name = "linkedin"
     url  = "https://www.linkedin.com/in/hugoprudente/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

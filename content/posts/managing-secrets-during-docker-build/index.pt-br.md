@@ -14,7 +14,7 @@ tags:
 slug: gerenciando-segredos-durante-docker-build
 title: "Gerenciando Segredos Durante Docker Build"
 date: 2021-03-04T22:46:31Z
-draft: true
+draft: false
 toc: true
 ---
 
