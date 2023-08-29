@@ -10,7 +10,7 @@ HUGO_CMD=docker run --rm -it -v ${WORKDIR}:/site ${DOCKER_NAMESPACE}/${DOCKER_IM
 HUGO_SERVER=docker run --rm -it -p1313:1313 -v ${WORKDIR}:/site ${DOCKER_NAMESPACE}/${DOCKER_IMG_NAME}:${DOCKER_IMG_TAG}
 
 DATE=$(date)
-COMMIT_MESSAGE="2021 community return effort ${DATE}"
+COMMIT_MESSAGE="community return effort ${DATE}"
 VENDOR ?= ${WORKDIR}/vendor
 
 define PRINT_HELP_PYSCRIPT
@@ -34,10 +34,10 @@ image: $(VENDOR) ## Build gohugo.io/hugo docker image
 deploy: ## Deploy the post to production
 	${HUGO_CMD} -t hello-friend-ng
 	echo ${HUGO_CMD} -t hello-friend-ng
-	cd public
-	git add .
-	git commit -m ${COMMIT_MESSAGE}
-	git push origin master
+	cd public && git add .
+	cd public && git add .
+	cd public && git commit -m ${COMMIT_MESSAGE}
+	cd public && git push origin master
 
 local: image ## Run gohugo.io/hugo binding 0.0.0.0
 	rm -rf public/*
