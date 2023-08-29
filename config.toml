@@ -1,6 +1,7 @@
 baseURL = "https://hugoprudente.github.io"
 
 googleAnalytics = "UA-154006380-1"
+googleAnalyticsID = "G-G73E6NWXR0"
 theme = "hello-friend-ng"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = "true"

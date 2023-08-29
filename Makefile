@@ -29,7 +29,7 @@ help:
 
 image: $(VENDOR) ## Build gohugo.io/hugo docker image
 	cd ${VENDOR}; git pull
-	cd ${VENDOR}; docker build -t ${DOCKER_NAMESPACE}/${DOCKER_IMG_NAME}:${DOCKER_IMG_TAG} .
+	cd ${VENDOR}; docker build --build-arg HUGO_BUILD_TAGS=extended -t ${DOCKER_NAMESPACE}/${DOCKER_IMG_NAME}:${DOCKER_IMG_TAG} .
 
 deploy: ## Deploy the post to production
 	${HUGO_CMD} -t hello-friend-ng
