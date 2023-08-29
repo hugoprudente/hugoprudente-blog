@@ -35,7 +35,7 @@ deploy: ## Deploy the post to production
 	${HUGO_CMD} -t hello-friend-ng
 	cd public
 	git add .
-	git commit -m "${COMMIT_MESSAGE}"
+	git commit -m ${COMMIT_MESSAGE}
 	git push origin master
 
 local: image ## Run gohugo.io/hugo binding 0.0.0.0
