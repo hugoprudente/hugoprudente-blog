@@ -33,6 +33,7 @@ image: $(VENDOR) ## Build gohugo.io/hugo docker image
 
 deploy: ## Deploy the post to production
 	${HUGO_CMD} -t hello-friend-ng
+	echo ${HUGO_CMD} -t hello-friend-ng
 	cd public
 	git add .
 	git commit -m ${COMMIT_MESSAGE}
