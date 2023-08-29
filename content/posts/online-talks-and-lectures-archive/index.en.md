@@ -107,7 +107,7 @@ tags:
 slug: online-talks-and-lectures-archive
 title: "Online Talks and Lectures Archive"
 date: 2023-08-29T10:32:57Z
-draft: true
+draft: false
 toc: true
 ---
 
