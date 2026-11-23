@@ -1,0 +1,42 @@
+<div class="col-md-6 col-lg-4 p-2">
+  <div class="card mt-3 h-100 cert-tile">
+    {{- if .image }}
+      {{ $badge := resources.Get .image }}
+      {{- if $badge }}
+        <div class="cert-tile-badge-wrap">
+          <img
+            class="accomplishment-badge"
+            src="{{ $badge.RelPermalink }}"
+            alt="{{ .name }}"
+            loading="lazy"
+            width="{{ $badge.Width }}"
+            height="{{ $badge.Height }}"
+          >
+        </div>
+      {{- end }}
+    {{- end }}
+    <div class="card-header text-center">
+      <h5 class="card-title mb-0">{{ .name }}</h5>
+      <div class="sub-title">
+        {{ if .organization.url }}
+          <span><a href="{{ .organization.url }}" title="{{ .organization.name }}" target="_blank" rel="noopener">{{ .organization.name }}</a></span>
+        {{ else }}
+          <span>{{ .organization.name }}</span>
+        {{ end }}
+        {{- with .timeline }}
+          <span class="ms-2">{{ . }}</span>
+        {{- end }}
+      </div>
+    </div>
+    {{- with .courseOverview }}
+      <div class="card-body">
+        <p>{{ . | markdownify }}</p>
+      </div>
+    {{- end }}
+    <div class="card-footer text-center mt-auto">
+      {{ if .certificateURL }}
+        <a class="btn btn-outline-info btn-sm mb-2" href="{{ .certificateURL }}" target="_blank" rel="noopener" role="button">{{ i18n "view_certificate"}}</a>
+      {{ end }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+name: Toha build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/toha]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone Toha theme
+        run: |
+          git clone --depth 1 --branch v4.16.0 https://github.com/hugo-themes/toha.git third_party/toha
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
+          extended: true
+
+      - name: Install npm dependencies
+        env:
+          NPM_REGISTRY: ${{ secrets.NPM_REGISTRY }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          chmod +x scripts/npmrc-from-env.sh
+          NPM_REGISTRY="${NPM_REGISTRY:-https://registry.npmjs.org/}" \
+          sh scripts/npmrc-from-env.sh .npmrc
+          npm ci --omit=dev
+          rm -f .npmrc
+
+      - name: Build site
+        run: hugo build --config hugo.yaml -b https://hugoprudente.github.io/
+
+      - name: Upload public artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-toha
+          path: public/

@@ -1,0 +1,297 @@
+section:
+  name: Habilidades
+  id: skills
+  enable: false
+  weight: 11
+  showOnNavbar: false
+  filter: true
+buttons:
+- name: Todas
+  filter: all
+- name: Nuvem, virtualização e cloud native
+  filter: platforms
+- name: Observabilidade e SRE
+  filter: monitoring
+- name: Segurança e compliance
+  filter: security
+- name: Automação e entrega
+  filter: automation
+- name: Linguagens de programação
+  filter: programming
+- name: IA e LLM
+  filter: ai-llm
+- name: Redes e protocolos
+  filter: protocols
+- name: Essenciais e suporte
+  filter: essentials
+skills:
+- name: OpenStack
+  summary: 'Nuvem privada em escala: 200+ clusters, 20k hypervisors, 100k+ VMs e ciclo de vida de tenants.'
+  categories:
+  - platforms
+  url: https://www.openstack.org/
+  icon: fas fa-cloud
+- name: Amazon Web Services (AWS)
+  summary: 'Seis anos da consultoria ao Enterprise Deployment: Batch, EKS/ECS, HPC, IaC e observabilidade.'
+  categories:
+  - platforms
+  url: https://aws.amazon.com/
+  icon: fab fa-aws
+- name: Linux
+  summary: 'Distribuições usadas profissionalmente: Debian/Ubuntu, Gentoo (Aramax/FX), CentOS Stream (pipelines de imagem) e Kali em formação de segurança. Fundamentos LPIC-1.'
+  categories:
+  - platforms
+  - os
+  url: https://www.kernel.org/
+  icon: fab fa-linux
+- name: Podman & Docker
+  summary: Imagens com Podman e Docker; Skopeo e Kaniko no Kubernetes.
+  categories:
+  - platforms
+  url: https://podman.io/
+  icon: fab fa-docker
+- name: Kubernetes
+  summary: CKA/CKAD; 70+ clusters; CAPI/CAPO; upgrades com Cilium; endurecimento de plataforma.
+  categories:
+  - platforms
+  url: https://kubernetes.io/
+  icon: fas fa-dharmachakra
+- name: Cluster API
+  summary: Provisionamento e ciclo de vida com CAPI/CAPO no OpenStack.
+  categories:
+  - platforms
+  url: https://cluster-api.sigs.k8s.io/
+  icon: fas fa-sitemap
+- name: Ceph
+  summary: Storage distribuído e automação de falhas de hardware.
+  categories:
+  - platforms
+  url: https://ceph.io/
+  icon: fas fa-database
+- name: Cilium
+  summary: CNI, Hubble, policy de rede e upgrades in-place sem downtime.
+  categories:
+  - platforms
+  - protocols
+  - security
+  url: https://cilium.io/
+  icon: fas fa-network-wired
+- name: eBPF
+  summary: 'Observabilidade e rede no kernel: datapath Cilium e policy.'
+  categories:
+  - platforms
+  - protocols
+  - os
+  - security
+  url: https://ebpf.io/
+  icon: fas fa-microchip
+- name: Helm Charts
+  summary: Empacotamento no Kubernetes; padrões Helm/Kustomize com Argo.
+  categories:
+  - platforms
+  - automation
+  url: https://helm.sh/
+  icon: fas fa-ship
+- name: Argo Project
+  summary: 'CAPA: Argo CD, Workflows, Rollouts e Events; GitOps e entrega progressiva.'
+  categories:
+  - platforms
+  - automation
+  url: https://argoproj.github.io/
+  icon: fas fa-code-branch
+- name: OpenBAO
+  summary: Avaliação de segredos, rotação e alinhamento a SDLC seguro.
+  categories:
+  - security
+  - platforms
+  url: https://openbao.org/
+  icon: fas fa-key
+- name: Secure SDLC & Supply-Chain Scanning
+  summary: 'AppSec em escala: gitleaks, Semgrep, Checkov e Snyk; Kyverno/PSS e SecureFlag.'
+  categories:
+  - security
+  - automation
+  url: https://www.checkov.io/
+  icon: fas fa-user-shield
+- name: Prometheus
+  summary: 'PCA na prática: PromQL, exporters, regras e Alertmanager em plataforma.'
+  categories:
+  - monitoring
+  - platforms
+  url: https://prometheus.io/
+  icon: fas fa-chart-line
+- name: Grafana
+  summary: Dashboards por data center; painéis com PromQL (PCA).
+  categories:
+  - monitoring
+  url: https://grafana.com/
+  icon: fas fa-chart-area
+- name: Zabbix
+  summary: Monitoramento em migrações AWS e plataformas ShelfPix/Aramax.
+  categories:
+  - monitoring
+  url: https://www.zabbix.com/
+  icon: fas fa-desktop
+- name: Amazon CloudWatch
+  summary: Métricas, logs, alarmes AWS; X-Ray no suporte Enterprise.
+  categories:
+  - monitoring
+  - platforms
+  url: https://aws.amazon.com/cloudwatch/
+  icon: fab fa-aws
+- name: Site Reliability Engineering
+  summary: ITIL, SLI/SLO, incidentes e redução de toil em escala.
+  categories:
+  - monitoring
+  - platforms
+  url: https://sre.google/
+  icon: fas fa-heart-pulse
+- name: AWX
+  summary: Controlador Ansible com Dex; playbooks selecionados pelo bot LLM.
+  categories:
+  - automation
+  - platforms
+  url: https://ansible.com/open-source
+  icon: fas fa-server
+- name: Vim
+  summary: Editor terminal principal para SRE remoto.
+  categories:
+  - essentials
+  url: https://www.vim.org/
+  icon: fas fa-keyboard
+- name: Zed
+  summary: Edição estruturada de código e documentação.
+  categories:
+  - essentials
+  url: https://zed.dev/
+  icon: fas fa-edit
+- name: VSCodium
+  summary: IDE sem telemetria do vendor.
+  categories:
+  - essentials
+  url: https://vscodium.com/
+  icon: fas fa-laptop-code
+- name: OTRS
+  summary: Tickets para data center e operação no varejo.
+  categories:
+  - essentials
+  url: https://otrs.com/
+  icon: fas fa-ticket-alt
+- name: MediaWiki
+  summary: Runbooks em migrações AWS.
+  categories:
+  - essentials
+  url: https://www.mediawiki.org/
+  icon: fab fa-wikipedia-w
+- name: Computer Vision
+  summary: 'Desde 2013: OpenCV/Caffe, ShelfPix/Aramax, Android NDK.'
+  categories:
+  - ai-llm
+  - programming
+  url: https://opencv.org/
+  icon: fas fa-eye
+- name: Python
+  summary: Automação, LLM, clientes Prometheus e tooling.
+  categories:
+  - programming
+  - automation
+  url: https://www.python.org/
+  icon: fab fa-python
+- name: Java
+  summary: Java EE, Maven, Hibernate/Tomcat e BI com Pentaho.
+  categories:
+  - programming
+  url: https://dev.java/
+  icon: fab fa-java
+- name: C++
+  summary: Qt, Android NDK e visão embarcada junto a OpenCV.
+  categories:
+  - programming
+  url: https://isocpp.org/
+  icon: fas fa-code
+- name: Go
+  summary: Em estudo para tooling cloud-native.
+  categories:
+  - programming
+  url: https://go.dev/
+  icon: fas fa-code
+- name: Rust
+  summary: Em estudo para componentes de sistemas.
+  categories:
+  - programming
+  url: https://www.rust-lang.org/
+  icon: fas fa-cog
+- name: Git
+  summary: Controle de versão, GitOps, Zuul e GitLab.
+  categories:
+  - automation
+  - essentials
+  url: https://git-scm.com/
+  icon: fab fa-git-alt
+- name: Ansible
+  summary: Playbooks determinísticos e AWX de produção.
+  categories:
+  - automation
+  - platforms
+  url: https://www.ansible.com/
+  icon: fas fa-cogs
+- name: Terraform
+  summary: Terraform, CloudFormation e Troposphere (AWS e NerdWeek).
+  categories:
+  - automation
+  - platforms
+  url: https://www.terraform.io/
+  icon: fas fa-layer-group
+- name: Zuul CI
+  summary: CI/CD com gates em Kubernetes e nuvem privada.
+  categories:
+  - automation
+  - platforms
+  url: https://zuul-ci.org/
+  icon: fas fa-project-diagram
+- name: GitLab CI/CD
+  summary: Pipelines e GitLab Certified Associate.
+  categories:
+  - automation
+  - platforms
+  url: https://about.gitlab.com/
+  icon: fab fa-gitlab
+- name: AWS Messaging
+  summary: SNS, SQS e EventBridge.
+  categories:
+  - platforms
+  url: https://aws.amazon.com/sns/
+  icon: fas fa-envelope
+- name: Slack
+  summary: Notificações, Alertmanager e bots agênticos.
+  categories:
+  - monitoring
+  - ai-llm
+  url: https://slack.com/
+  icon: fab fa-slack
+- name: CoreDNS
+  summary: DNS in-cluster; alertas e runbooks.
+  categories:
+  - protocols
+  - platforms
+  url: https://coredns.io/
+  icon: fas fa-sitemap
+- name: DNS & TLS
+  summary: LPIC-1, Route 53, HTTP/TLS.
+  categories:
+  - protocols
+  - security
+  url: https://letsencrypt.org/
+  icon: fas fa-lock
+- name: Large Language Models (LLM)
+  summary: Análise de alertas e stacks de modelos.
+  categories:
+  - ai-llm
+  url: https://huggingface.co/docs/transformers/
+  icon: fas fa-brain
+- name: Agentic AI Development
+  summary: Bot Slack com AWX, Alertmanager e playbooks Ansible.
+  categories:
+  - ai-llm
+  url: https://github.com/langchain-ai/langchain
+  icon: fas fa-robot

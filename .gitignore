@@ -4,3 +4,9 @@ public/
 resources/
 static/
 .DS_Store
+node_modules/
+.hugo_build.lock
+third_party/toha/
+.env
+.npmrc
+profile_parsed.json

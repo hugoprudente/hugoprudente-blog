@@ -1,0 +1,22 @@
+services:
+  hugo:
+    image: ghcr.io/gohugoio/hugo:latest
+    working_dir: /project
+    command: server -D --config config.toml --bind 0.0.0.0 --baseURL http://localhost:1313/ --disableFastRender
+    ports:
+      - "1313:1313"
+    volumes:
+      - ./:/project:Z
+
+  hugo-toha:
+    profiles: ["toha"]
+    build:
+      context: .
+      dockerfile: Containerfile.toha
+      args:
+        NPM_TOKEN: ${NPM_TOKEN}
+        NPM_REGISTRY: ${NPM_REGISTRY}
+    ports:
+      - "1313:1313"
+    volumes:
+      - ./:/project:Z

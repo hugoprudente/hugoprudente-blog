@@ -1,17 +1,9 @@
-.PHONY: clean docker-push help image secrets shell
+.PHONY: help serve serve-toha stop build build-toha regenerate-skills post
 
-DOCKER_IMG_NAME ?= hugo
-DOCKER_IMG_TAG ?= latest
-DOCKER_NAMESPACE ?= gohugo.io
 
 WORKDIR=$(PWD)
 
-HUGO_CMD=docker run --rm -it -v ${WORKDIR}:/site ${DOCKER_NAMESPACE}/${DOCKER_IMG_NAME}:${DOCKER_IMG_TAG}
-HUGO_SERVER=docker run --rm -it -p1313:1313 -v ${WORKDIR}:/site ${DOCKER_NAMESPACE}/${DOCKER_IMG_NAME}:${DOCKER_IMG_TAG}
 
-DATE=$(date)
-COMMIT_MESSAGE="community return effort ${DATE}"
-VENDOR ?= ${WORKDIR}/vendor
 
 define PRINT_HELP_PYSCRIPT
 import re, sys
@@ -27,26 +19,43 @@ export PRINT_HELP_PYSCRIPT
 help:
 	@python3 -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-image: $(VENDOR) ## Build gohugo.io/hugo docker image
-	cd ${VENDOR}; git pull
-	cd ${VENDOR}; docker build --build-arg HUGO_BUILD_TAGS=extended -t ${DOCKER_NAMESPACE}/${DOCKER_IMG_NAME}:${DOCKER_IMG_TAG} .
+serve: ## hello-friend-ng dev server (config.toml)
+	podman compose up hugo
 
-deploy: ## Deploy the post to production
-	${HUGO_CMD} -t hello-friend-ng
-	echo ${HUGO_CMD} -t hello-friend-ng
-	cd public && git add .
-	cd public && git add .
-	cd public && git commit -m ${COMMIT_MESSAGE}
-	cd public && git push origin master
+serve-toha: ## Toha dev server (builds image; npm only inside container)
+	podman compose --profile toha up hugo-toha --build
 
-local: image ## Run gohugo.io/hugo binding 0.0.0.0
-	rm -rf public/*
-	${HUGO_CMD} -t hello-friend-ng
-	${HUGO_SERVER} server -D --bind 0.0.0.0 
+stop: ## Stop compose services
+	podman compose --profile toha down
+	podman compose down
 
-post: image ## Create a new post usage: make post post=title-of-my-post
-	${HUGO_CMD} new posts/${post}
+build: ## Build hello-friend-ng into ./public
+	podman run --rm -v ${WORKDIR}:/project:Z -w /project ghcr.io/gohugoio/hugo:latest build --config config.toml
 
-$(VENDOR):
-	@ mkdir -p $(VENDOR)
-	git clone https://github.com/gohugoio/hugo.git ${VENDOR}
+build-toha: ## Build Toha into ./public (loads .env for Artifactory npm)
+	@set -a && [ -f .env ] && . ./.env; set +a; \
+	podman build -f Containerfile.toha \
+	  --build-arg NPM_TOKEN="$$NPM_TOKEN" \
+	  --build-arg NPM_REGISTRY="$$NPM_REGISTRY" \
+	  -t hugoprudente-blog-toha:latest .
+	podman run --rm -v ${WORKDIR}:/project:Z hugoprudente-blog-toha:latest build
+
+build-toha-prod: ## Toha build with production baseURL
+	@set -a && [ -f .env ] && . ./.env; set +a; \
+	podman build -f Containerfile.toha \
+	  --build-arg NPM_TOKEN="$$NPM_TOKEN" \
+	  --build-arg NPM_REGISTRY="$$NPM_REGISTRY" \
+	  -t hugoprudente-blog-toha:latest .
+	podman run --rm -v ${WORKDIR}:/project:Z hugoprudente-blog-toha:latest build -b https://hugoprudente.github.io/
+
+verify-toha-ui: ## Host Python Playwright (headed); run make serve-toha first
+	python3 scripts/verify_toha_home.py --headed --pause --base-url http://127.0.0.1:1313/en/
+
+verify-toha-ui-headless: ## Same checks, no browser window
+	python3 scripts/verify_toha_home.py --headless --base-url http://127.0.0.1:1313/en/
+
+regenerate-skills: ## Rewrite data/*/sections/skills.yaml from scripts/skills_catalog.py
+	python3 scripts/regenerate_skills_yaml.py
+
+post: ## Create a new post usage: make post post=title-of-my-post
+	podman run --rm -v ${WORKDIR}:/project:Z -w /project ghcr.io/gohugoio/hugo:latest new posts/${post}/index.en.md

@@ -1,0 +1,14 @@
+name: Hugo Prudente
+nickname: Hugo
+greeting: Hi, I am
+image: images/author/hugo.png
+contactInfo:
+  email: hugo.kenshin+site@gmail.com
+  github: hugoprudente
+  linkedin: hugoprudente
+summary:
+- Principal SRE on large-scale private cloud (OpenStack + Kubernetes)
+- Air-gapped Kubernetes platform architecture and zero-downtime upgrades
+- 'Former AWS support: Batch, EKS/ECS, and container HPC'
+- Computer vision and AI since 2013; agentic LLM ops automation today
+- Co-founder of NerdWeek; advisor to Odin's Krieger Fest

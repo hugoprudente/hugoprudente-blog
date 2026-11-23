@@ -1,0 +1,59 @@
+section:
+  name: Certificações
+  id: accomplishments
+  enable: true
+  weight: 5
+  showOnNavbar: true
+accomplishments:
+- name: SDLC Security - 1 - Core Concepts
+  image: images/sections/certifications/secureflag.png
+  organization:
+    name: SecureFlag
+    url: https://www.secureflag.com/security-training-for-developers/
+  certificateURL: https://www.secureflag.com/s?f7e9f841-1700-4a5c-9fb1-56086c7029cf
+- name: 'CAPA: Certified Argo Project Associate'
+  image: images/sections/certifications/capa-argo.png
+  organization:
+    name: The Linux Foundation
+    url: https://training.linuxfoundation.org/certification/certified-argo-project-associate-capa/
+  certificateURL: https://www.credly.com/badges/14937d06-1532-4ece-80d6-56f17837c0e7/linked_in_profile
+- name: 'LFC101: Inclusive Speaker Orientation'
+  image: images/sections/certifications/lfc101.png
+  organization:
+    name: The Linux Foundation
+    url: https://training.linuxfoundation.org/training/inclusive-speaker-orientation-lfc101/
+  certificateURL: https://www.credly.com/badges/6e5c4f13-8b85-459a-962c-73565724c023/linked_in_profile
+- name: GitLab Certified Associate (Credly)
+  image: images/sections/certifications/gitlab-associate.png
+  organization:
+    name: GitLab
+    url: https://training.linuxfoundation.org/certification/gitlab-certified-associate-gca/
+  certificateURL: https://www.credly.com/badges/a121a977-29d1-400d-9da5-b16b9249e387
+- name: ITIL Foundations
+  image: images/sections/certifications/itil.png
+  organization:
+    name: AXELOS Global Best Practice
+    url: https://www.peoplecert.org/browse-certifications/it-governance-and-service-management/ITIL-1/itil-4-foundation-2565
+- name: 'CKAD: Certified Kubernetes Application Developer'
+  image: images/sections/certifications/ckad.png
+  organization:
+    name: The Linux Foundation
+    url: https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/
+  certificateURL: https://www.credly.com/badges/9c87fa62-8cf4-491f-8706-e8eee008978e/linked_in_profile
+- name: 'PCA: Prometheus Certified Associate'
+  image: images/sections/certifications/pca.png
+  organization:
+    name: The Linux Foundation
+    url: https://training.linuxfoundation.org/certification/prometheus-certified-associate/
+  certificateURL: https://www.credly.com/badges/ac6a6130-d8e9-46fc-806e-58dce4686097/public_url
+- name: 'CKA: Certified Kubernetes Administrator'
+  image: images/sections/certifications/cka.png
+  organization:
+    name: The Linux Foundation
+    url: https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
+  certificateURL: https://www.credly.com/badges/d62654f8-4b23-4cc8-a0c8-abdaae7d6471?source=linked_in_profile
+- name: LPIC 1
+  image: images/sections/certifications/lpic-1.png
+  organization:
+    name: Linux Professional Institute
+    url: https://www.lpi.org/register-for-exams

@@ -1,0 +1,7 @@
+section:
+  name: Writing
+  id: recent-posts
+  enable: true
+  weight: 6
+  showOnNavbar: true
+  showMoreButton: true

@@ -1,0 +1,178 @@
+section:
+  name: Experiência
+  id: experiences
+  # Desativado na home; YAML completo para sync LinkedIn. enable/showOnNavbar true para restaurar.
+  enable: false
+  weight: 3
+  showOnNavbar: false
+experiences:
+- company:
+    name: Workday
+    url: https://www.workday.com
+    location: Dublín
+  positions:
+  - designation: Principal Site Reliability Engineer
+    start: May 2024
+    responsibilities:
+    - 'Operate Workday''s private cloud on OpenStack: 200+ clusters, 20,000 hypervisors and 100,000+ VMs'
+    - Run 70+ Kubernetes clusters on that infrastructure, with lifecycle managed through Cluster API (CAPI/CAPO)
+    - One of 2 lead architects of the air-gapped Kubernetes platform, from design through production deployment
+    - Deliver seamless in-place Kubernetes upgrades from 1.31 to 1.37 with zero downtime, using Cilium
+    - 'Own the platform lifecycle: OS image pipeline (CentOS Stream 10), kube-bench security compliance and ArgoCD performance tuning'
+    - 'Built observability for the platform: alerts and runbooks for Cilium, CoreDNS, Cluster Autoscaler, Metrics Server and the OpenStack cloud controller, plus alerting on hypervisor crashes with VMs'
+    - 'Hardened security and secrets management: OIDC (Dex SSO) on AWX, credential rotation automation and OpenBAO evaluation'
+    - Built agentic AI/LLM automation with a Slackbot that monitors AWX, the internal Ansible executor and Prometheus Alertmanager. It acts on alerts by running runbooks to collect logs and confirm the issue, then uses an LLM to analyze the logs and select the right deterministic Ansible playbook to execute
+  - designation: Senior Site Reliability Engineer (SRE)
+    start: Aug 2020
+    responsibilities:
+    - Created the global standard and zero-touch automation for removing OpenStack hypervisors from service for upgrades, reducing operational toil by 90%
+    - Led the "Operational Automation in Openstack/Centos migration to match previous version" epic, bringing the newer OpenStack platform to parity with the older one
+    - Automated hardware-failure handling (Ceph drive swaps and DIMM/CPU failures) into the data-center ticket workflow, with time-saved tracking for ROI
+    - Built per-data-center Grafana dashboards for hypervisor health and impacted instances, so SREs could self-serve tenant issues
+    end: May 2024
+- company:
+    name: Amazon Web Services (AWS)
+    url: https://aws.amazon.com
+    location: Greater Dublin
+  positions:
+  - designation: Cloud Support Engineer II (Deployment)
+    start: Dec 2018
+    responsibilities:
+    - Supported Enterprise customers on automation, delivery, containers and infrastructure as code, at senior capacity.
+    - HPC specialist for AWS Batch, ParallelCluster and containers on EKS/ECS (GPU, F1, MPI)
+    - Mentored 5 AWS Batch HPC specialists globally
+    - Global point of contact for X-Ray
+    - Trained 100+ engineers and TAMs on highly available applications on AWS
+    - Contributor to the AWS CSI drivers for Kubernetes
+    - 'Services I supported and resolved issues on:'
+    - '- CI/CD and IaC: CloudFormation, CDK, SDK, CodePipeline, CodeBuild, CodeCommit, CodeDeploy, Service Catalog, Control Tower'
+    - '- Config management: OpsWorks (Chef and Puppet), Elastic Beanstalk'
+    - '- Containers: ECS, EKS, AppMesh, Deep Learning Containers'
+    - '- Serverless: Lambda, SAM, API Gateway, Step Functions, EventBridge, SNS, SQS'
+    - '- Compute and network: EC2, Auto Scaling, VPC, Load Balancers, EFS/FSx'
+    - '- Observability and dev: X-Ray, CloudWatch, Cloud9'
+    - '- Third-party: GitLab, Terraform, Troposphere, Airflow, Nextflow, Vault, Packer'
+    end: Aug 2020
+  - designation: Cloud Support Engineer (Deployment)
+    start: Sep 2016
+    responsibilities:
+    - Supported Enterprise customers on automation, delivery, containers and infrastructure as code.
+    - Created the SME program for AWS Batch
+    - HPC specialist for the AWS Batch service
+    - Developed the AWS Batch and Apache Airflow integration
+    - 'Services supported:'
+    - CloudFormation, CDK, SDK, CodePipeline, CodeBuild, CodeCommit, CodeDeploy, OpsWorks (Chef and Puppet), Service Catalog, Elastic Beanstalk, X-Ray, ECS, Fargate, Lambda, Serverless, SAM
+    - 'Third-party: GitLab, Terraform, Troposphere, Airflow, Nextflow, Vault, Packer'
+    end: Dec 2018
+- company:
+    name: HiPartners Capital&Work
+    url: https://www.linkedin.com/company/hipartners/
+    location: São Paulo, Brazil
+  positions:
+  - designation: IT Consultant
+    start: Feb 2015
+    responsibilities:
+    - Investment fund that acquired FX, also providing consulting to other companies of the group.
+    - Computer vision, microservices, software engineering
+    - Networking and Linux, clustering, high availability (HA)
+    - Infrastructure and cloud (AWS)
+    end: Jan 2016
+- company:
+    name: FX | Flow Intelligence
+    url: https://www.linkedin.com/company/feixe/
+    location: São Paulo, Brazil
+  positions:
+  - designation: IT Consultant
+    start: Feb 2014
+    responsibilities:
+    - Became a consultant after the company was acquired by the HiPartners investment fund, to transfer the technology and know-how.
+    - Microservices
+    - OpenCV development in C++, Python and Android NDK
+    - Java web applications
+    end: Mar 2016
+  - designation: Senior Software Engineer
+    start: Feb 2008
+    responsibilities:
+    - Installed, configured and monitored Gentoo BSD and Android MicroPC systems on 10,000 points across Brazil.
+    - Developed the data-monitoring system and the Android application (C++ state machine) for the people-counting software
+    - Migrated the platform to AWS and implemented monitoring with Zabbix, OTRS, MediaWiki and Puppet
+    - 'Developed the maintenance-automation system: PHP (Symfony), C# .NET with Silverlight and IdeaBlade DevForce plus a Windows Service, Java EE (EJB 3.0, JPA, JSF 2, PrimeFaces), Python 2.7 and 3.x, C++ with Qt 4.x and 5.x, Android 2.2+, AWS, nginx and Tomcat'
+    end: Feb 2014
+- company:
+    name: SHELFPIX
+    url: https://www.linkedin.com/company/shelfpix/
+    location: São Paulo, Brazil
+  positions:
+  - designation: Software Engineer and SRE
+    start: Aug 2013
+    responsibilities:
+    - Develop the reporting platform and the Android application that use computer vision to collect product data from supermarket shelves with OpenCV.
+    - 'Computer vision: C++ with OpenCV and Caffe (deep learning); Python with Caffe and NumPy'
+    - 'Backend: microservices in Java 7 and 8 with Maven, EJB and JPA; BI with Pentaho'
+    - 'Mobile: Android with NDK and OpenCV'
+    - 'Reliability: automated monitoring with Jenkins, OTRS and Zabbix'
+    - Consult as architect for SRE and software development
+- company:
+    name: Magicorp Consultoria em Tecnologia da Informação Ltda
+    url: ''
+    location: Cotia - SP
+  positions:
+  - designation: Partner
+    start: Jan 2012
+    responsibilities:
+    - IT consulting company, with clients served in infrastructure, architecture and cloud.
+    - Delivered IT consulting and services across infrastructure, architecture, migration, backup, monitoring, security and infrastructure automation
+    - Specialized in cloud on Amazon Web Services (AWS)
+    - Closed the company in December 2019
+    end: Dec 2019
+- company:
+    name: Odin's Krieger Fest (Brazil)
+    url: ''
+    location: ''
+  positions:
+  - designation: Advisor
+    start: Feb 2011
+    responsibilities:
+    - Brazilian metal festival. I advise the producers on the lineup.
+    - Attend metal festivals across Europe and the UK each year to scout viking, pagan, black metal and folk metal bands
+    - Analyze each band's presence and performance on streaming and social platforms in Brazil, using audience data to judge how they would be received there
+    - Recommend bands and give ideas to the producers, and advise bands on which festivals fit them
+- company:
+    name: NerdWeek
+    url: https://nerdweek.com.br/
+    location: Earth
+  positions:
+  - designation: Co-Founder, Editor and SRE
+    start: Jan 2011
+    responsibilities:
+    - Brazilian nerd and geek media outlet covering games, films, series, comics and technology. I still run it in my spare time.
+    - 'Co-founded NerdWeek in 2011 and built the infrastructure behind it as code with Terraform on AWS: CodeCommit, CodeBuild and CodePipeline for CI/CD, ECS for compute, RDS for the database, CloudFront as the CDN and Route 53 for DNS'
+    - Grew the audience to 100,000+ monthly visitors, with 21,000+ Facebook followers and 1,000+ subscribers on YouTube and Instagram
+    - Cover major events in person and online across Ireland, the UK, Brazil and Germany, including Gamescom, Comic Con, Anime Friends, BGS and E3
+- company:
+    name: Aramax Vision Technologies Ltda
+    url: ''
+    location: Greater São Paulo Area
+  positions:
+  - designation: Linux Systems Administrator
+    start: Sep 2007
+    responsibilities:
+    - Installation, Configuration and Monitoring of Gentoo BSD to 200 machines across Brazilian territory
+    - 'Details:'
+    - '- Company join Feixe Tecnologia/FX Retail'
+    end: Feb 2008
+- company:
+    name: GUINDASTEC - Guindastes e Serviços Técnicos LTDA
+    url: https://www.guindastec.com.br/
+    location: Carapicuíba - SP
+  positions:
+  - designation: AutoCad Designer / SysAdmin (Microsoft)
+    start: Jan 2005
+    responsibilities:
+    - AutoCad designer for civil construction drawing rigging plans for All-Terrain cranes using
+    - AutoCad 2000, 2005 and 2007.
+    - 'Details:'
+    - '- Engeman - Training and Deployment of crane proprietary maintenance software'
+    - '- Lead Designer of rigging plan of Dutch Windmill on Holambra - SP - Brazil'
+    - '* http://www.guindastec.com.br/plano-de-rigging'
+    end: Sep 2007

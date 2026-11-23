@@ -1,0 +1,7 @@
+{{ return (dict
+    "transpiler" "dartsass"
+    "outputStyle" "compressed"
+    "enableSourceMap" (not hugo.IsProduction)
+    "includePaths" (slice "node_modules")
+    "silenceDependencyDeprecations" true
+) }}

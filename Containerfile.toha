@@ -1,0 +1,18 @@
+# Toha image: npm ci via NPM_REGISTRY (default public npm); optional NPM_TOKEN from .env on host.
+FROM ghcr.io/gohugoio/hugo:latest
+USER root
+ARG NPM_REGISTRY=https://registry.npmjs.org/
+ARG NPM_TOKEN
+WORKDIR /npm
+COPY package.json package-lock.json ./
+COPY scripts/npmrc-from-env.sh /usr/local/bin/npmrc-from-env.sh
+RUN chmod +x /usr/local/bin/npmrc-from-env.sh
+RUN NPM_REGISTRY="$NPM_REGISTRY" NPM_TOKEN="$NPM_TOKEN" \
+    npmrc-from-env.sh /npm/.npmrc \
+    && npm ci --omit=dev \
+    && rm -f /npm/.npmrc
+COPY scripts/toha-entrypoint.sh /toha-entrypoint.sh
+RUN chmod +x /toha-entrypoint.sh
+WORKDIR /project
+EXPOSE 1313
+ENTRYPOINT ["/toha-entrypoint.sh"]

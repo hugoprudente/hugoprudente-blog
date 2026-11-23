@@ -1,0 +1,6 @@
+public
+resources
+.git
+node_modules
+third_party/toha/.git
+layouts-hello-friend-ng

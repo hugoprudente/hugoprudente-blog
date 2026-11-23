@@ -1,0 +1,20 @@
+section:
+  name: Formação
+  id: education
+  # Desativado na home; mantido para sync LinkedIn. enable/showOnNavbar true para restaurar.
+  enable: false
+  weight: 4
+  showOnNavbar: false
+degrees:
+- name: Bachelor of Science (Computer Science)
+  icon: fa-graduation-cap
+  timeframe: 2006-2009
+  institution:
+    name: Universidade Paulista
+    url: ''
+  customSections:
+  - name: Capstone
+    content: 'Group capstone project on mass-distribution calculations over the axles in road freight transport, developed in Java EE with Hibernate and Tomcat, using a MySQL database on a Linux platform.
+
+
+      Why it matters: the weight on each axle matters more than the total weight. Pavement damage grows with roughly the fourth power of axle load, legal limits apply per axle and not only in total, and uneven loads affect braking, steering, rollover risk and tire and suspension wear.'

@@ -1,15 +1,16 @@
 baseURL = "https://hugoprudente.github.io"
 
-googleAnalytics = "UA-154006380-1"
-googleAnalyticsID = "G-G73E6NWXR0"
 theme = "hello-friend-ng"
+layoutDir = "layouts-hello-friend-ng"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = "true"
-disqusShortname = "hugoprudente"
 
 
-[author]
-  name = "Hugo Prudente"
+[services]
+  [services.googleAnalytics]
+    ID = "G-G73E6NWXR0"
+  [services.disqus]
+    shortname = "hugoprudente"
 
 [taxonomies]
   tag      = "tags"
@@ -22,7 +23,7 @@ title  = "Hugo Prudente"
 
   [[languages.en.menu.main]]
   url = "/posts"
-  name = "Blog"
+  name = "Writing"
   weight = 0
   
   [languages.en.params.logo]
@@ -35,13 +36,15 @@ title  = "Hugo Prudente"
 
   [[languages.pt-br.menu.main]]
   url = "/pt-br/posts"
-  name = "Blog"
+  name = "Artigos"
   weight = 0
   
   [languages.pt-br.params.logo]
   logoText = "make"
   logoHomeLink = "/pt-br/"
 [params]
+  [params.author]
+    name = "Hugo Prudente"
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
@@ -51,9 +54,9 @@ title  = "Hugo Prudente"
   disableReadOtherPosts = false
 
   # Metadata mostly used in document's head
-  description = "Automation above all things"
-  subtitle = "devops"
-  keywords = "posts, programming, devops, sysadmin, security, automation, aws"
+  description = "Principal SRE | OpenStack & Kubernetes at scale | AWS, platform engineering, and LLM ops automation"
+  subtitle = "SRE · platform · automation"
+  keywords = "sre, kubernetes, openstack, cluster-api, aws, platform-engineering, devops, automation, llm, observability"
   images = [""]
 
   # Directory name of your posts content (default is `content/posts`)
@@ -62,7 +65,7 @@ title  = "Hugo Prudente"
   # Default theme "light" or "dark"
   defaultTheme = "dark"
 
-  homeSubtitle = "Automation above all things"
+  homeSubtitle = "Principal SRE — private cloud, Kubernetes, and automation"
 
   # Social icons
   [[params.social]]

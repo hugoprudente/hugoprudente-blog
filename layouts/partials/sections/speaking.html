@@ -1,0 +1,44 @@
+{{ $sectionID := replace (lower .section.name) " " "-" }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+{{ $numShow := 6 }}
+{{ if .section.numShow }}
+  {{ $numShow = .section.numShow }}
+{{ end }}
+
+<div class="container-fluid anchor pb-5 speaking-section">
+  {{ if not (.section.hideTitle) }}
+    <h1 class="text-center">
+      <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
+  {{ else }}
+    <h1 class="text-center" style="display: none">
+      <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
+  {{ end }}
+  <div class="container">
+    <div class="row" id="speaking-post-cards">
+      {{ $talks := where (where site.RegularPages.ByDate.Reverse "Section" "posts") "Params.speaking" true }}
+      {{ $talks = where $talks "Params.hidden" "!=" true }}
+      {{ range first $numShow $talks }}
+        <div class="col-md-6 col-lg-4 p-2">
+          <div class="card mt-3 h-100">
+            <div class="card-body">
+              <h5 class="card-title"><a href="{{ .RelPermalink | relLangURL }}">{{ .Title }}</a></h5>
+              {{ with .Params.event }}
+                <p class="text-muted mb-2"><i class="fas fa-microphone"></i> {{ . }}</p>
+              {{ end }}
+              <p class="card-text">{{ .Summary | plainify }}</p>
+            </div>
+            <div class="card-footer d-flex flex-wrap gap-2">
+              <a class="btn btn-outline-info btn-sm" href="{{ .RelPermalink | relLangURL }}">{{ i18n "read" }}</a>
+              {{ with .Params.youtube }}
+                <a class="btn btn-outline-danger btn-sm" href="{{ . }}" target="_blank" rel="noopener">YouTube</a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

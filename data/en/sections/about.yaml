@@ -1,0 +1,39 @@
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+designation: Principal Site Reliability Engineer
+company:
+  name: Workday
+  url: https://www.workday.com
+summary: 'Principal Site Reliability Engineer running large-scale private cloud infrastructure at Workday. 200+ OpenStack clusters, 20,000 hypervisors and 100,000+ VMs, plus 70+ Kubernetes clusters on top, managed through Cluster API (CAPI/CAPO).
+
+
+  I''m one of 2 lead architects of our air-gapped Kubernetes platform, and we run seamless in-place upgrades from 1.31 to 1.37 with zero downtime using Cilium. I also build agentic AI/LLM automation that acts on production alerts: it collects logs, confirms the issue and runs deterministic Ansible playbooks.
+
+
+  Before OpenStack, I spent 6 years designing cloud-native solutions on AWS, from consulting through to AWS itself. The last 3 years were focused on container-based batch computing: AWS Batch, ParallelCluster, EKS and ECS, with deep involvement in GPU, F1 and MPI workloads. I created the SME program for AWS Batch. I''ve also worked with computer vision and AI since 2013 (OpenCV, Caffe), long before the current wave.
+
+
+  Certified in CAPA (Argo) and GitLab, with experience across Ansible, Terraform, ArgoCD, Prometheus and Helm.
+
+
+  Outside work I co-run NerdWeek, a media outlet with writers across the globe, and advise Odin''s Krieger Fest, a folk/viking metal festival in South America.
+
+
+  Open to conversations about platform and SRE leadership roles. Feel free to connect.'
+socialLinks:
+- name: Email
+  icon: fas fa-envelope
+  url: mailto:hugo.kenshin+site@gmail.com
+- name: Github
+  icon: fab fa-github
+  url: https://github.com/hugoprudente
+- name: LinkedIn
+  icon: fab fa-linkedin
+  url: https://www.linkedin.com/in/hugoprudente/
+- name: StackOverflow
+  icon: fab fa-stack-overflow
+  url: https://stackoverflow.com/users/1463918/hugo-prudente

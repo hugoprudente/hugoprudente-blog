@@ -1,0 +1,8 @@
+section:
+  name: Projects
+  id: projects
+  enable: false
+  weight: 5
+  showOnNavbar: false
+
+projects: []

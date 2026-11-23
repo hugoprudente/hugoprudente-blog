@@ -107,4 +107,4 @@ draft: true
 toc: false
 ---
 
-Everyone knows how important is to keep your AWS Account secure in case of a breach credential or an action that 
+Everyone knows how important is to keep your AWS Account secure in case of a breach credential or an action that

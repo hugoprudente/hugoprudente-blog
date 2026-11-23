@@ -1,0 +1,7 @@
+section:
+  name: Palestras
+  id: speaking
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  numShow: 6
